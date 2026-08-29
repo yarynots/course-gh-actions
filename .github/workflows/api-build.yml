@@ -5,7 +5,7 @@ on:
     paths:
       - ".github/workflows/api-build.yml"
       - "api/**"
-  workflow_dispatch: # manual
+  workflow_dispatch: # manualy
 
 jobs:
   build:
