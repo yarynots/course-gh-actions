@@ -7,9 +7,9 @@ on:
 permissions:
   pull-requests: write
 
-jobs:    
+jobs:  
+  run: echo 'comment ${{ github.event.comment.body }}'
   chat:
-    run: echo('comment 1 is' + github.event.comment.body)
     if: contains(github.event.comment.body, '/chat')
     runs-on: ubuntu-latest
     steps:
@@ -20,7 +20,6 @@ jobs:
           cmd: chat
           comment_body: ${{ github.event.comment.body }}
   review:
-    run: echo('comment 2 is' + github.event.comment.body)
     if: contains(github.event.comment.body, '/review')
     runs-on: ubuntu-latest
     steps:
