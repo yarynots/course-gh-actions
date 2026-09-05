@@ -11,8 +11,12 @@ jobs:
    log:
      runs-on: ubuntu-latest
      steps:
+          with:
+           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
        - run: echo 'comment ${{ github.event.comment.body }}'
        - run: echo '${{ toJson(github.event) }}'
+    
   # chat:
   #   #if: contains(github.event.comment.body, '/chat')
   #   runs-on: ubuntu-latest
