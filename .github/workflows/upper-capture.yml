@@ -6,7 +6,8 @@ on:
       - ".github/workflows/upper-capture.yml"
       - "upper/**"
   workflow_dispatch: # manual
-
+  
+# this workflow is triggered on push to the upper directory or when the workflow file itself is changed. It can also be triggered manually via the workflow_dispatch event.
 jobs:
   capture:
     strategy:
