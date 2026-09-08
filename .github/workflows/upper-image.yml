@@ -11,6 +11,7 @@ permissions:
   packages: write
   contents: read # not needed in public repos
 
+  # some cases require this, but not for this workflow
 jobs:
   image:
     runs-on: ubuntu-latest
