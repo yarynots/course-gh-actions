@@ -1,6 +1,6 @@
 services:
   api:
-    image: weshigbee/actions-web:latest
+    image: yarynots/weshigbee:latest
     build:
       context: .
       target: runner
