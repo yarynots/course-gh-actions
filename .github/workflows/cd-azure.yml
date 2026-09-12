@@ -35,6 +35,6 @@ jobs:
       - uses: azure/webapps-deploy@v3
         id: deploy
         with:
-          app-name: gh-actions-web-api
-          images: weshigbee/actions-web:latest
+          app-name: gh-actions-web-api-yarynots
+          images: yarynots/weshigbee:latest
           resource-group-name: gh-actions
